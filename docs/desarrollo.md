@@ -56,7 +56,7 @@ Con la información ya en mano pasamos a “rellenar” los huecos que dejamos e
 Cada card deberá tener un botón que dispare la acción de guardar una card que queremos destacar, dentro del localStorage. Deberás utilizar useReducer para manejar esta lógica.
 
 ### Paso 6: Estilado de componentes clave 
-En base al Theme actual deberías pasar determinada variante de colores a los componentes especificados como “estilables”. Es opcional pero no obligatorio estilar más apartados, dicha opción tendrá peso a la hora de evaluar la calificación final.
+En base al Theme actual deberías pasar determinada variante de colores a los componentes pertenecientes a las rutas (Home.jsx, Favs.jsx, Detail.jsx, Contact.jsx). Es opcional pero no obligatorio estilar más apartados, dicha opción tendrá peso a la hora de evaluar la calificación final
 
 ### Paso 7: Testing
 Por último, pero no menos importante, deberás realizar las pruebas asociadas a tu aplicación. Para ello deberás crear un nuevo archivo dentro del directorio /src/test/. Recorda que si bien el número de tests cases importa, también su relevancia será decisiva para el cumplimiento de la consigna (no intentes hacer muchos tests fáciles solamente para llegar a la cantidad)

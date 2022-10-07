@@ -35,7 +35,7 @@ Utilizando React Router deberán crear las siguientes direcciones descriptas en 
 * Manejar dicho comportamiento con el hook useReducer 
 
 ### Estilos
-En base al tema (claro u oscuro) consumido del contexto global, asignar el className correspondiente a los componentes. 
+En base al tema (claro u oscuro) consumido del contexto global, estilar las cuatro [rutas](#rutas) de la App (asignar determinados estilos si es “dark” o “light”).
 
 ###  Testing
 Realizar por lo menos 5 tests cases que verifiquen alguna funcionalidad de la aplicación (ten en cuenta que no solo se evaluará la cantidad, sino a esta altura también la efectividad o relevancia del test case elegido)
