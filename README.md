@@ -8,6 +8,7 @@ Examen Final de Frontend III
   * [Aspectos que modifican la valoración final de la nota](#aspectos-que-modifican-la-valoración-final-de-la-nota)
 * [Funcionalidades](#funcionalidades)
 * [Desarrollo](#desarrollo)
+* [API](#api)
 * [Entrega](#entrega)
   * [Fecha de Entrega](#fecha-de-entrega)
   * [Formato de Entrega](#formato-de-entrega)
@@ -75,6 +76,14 @@ Ver [Funcionalidades](docs/funcionalidades.md).
 ## Desarrollo
 
 Ver [Desarrollo](docs/desarrollo.md).
+
+## API
+
+La API a utilizar sera la siguiente:
+```https://jsonplaceholder.typicode.com/users```
+
+Y para cada dentista en especifico:
+```https://jsonplaceholder.typicode.com/users/:id```
 
 ## Entrega
 
