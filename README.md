@@ -62,7 +62,7 @@ Los siguientes aspectos son extras al requisito mínimo de aprobación que será
 **Testing unitario**
 * Se valorará el correcto uso del testing unitario y el incremento del numero de tests agregados (mas de 5 tests cases)
 
-**Testing unitario**
+**Estilos**
 * Se valorará el estilado de demas apartados de la App (por fuera del estilado obligatorio de las rutas en base al theme)
 
 **Buenas Prácticas**
