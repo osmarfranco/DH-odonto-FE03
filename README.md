@@ -93,7 +93,7 @@ Solo se admitirán entregas recibidas hasta el cierre de la clase 24, clase de E
 
 ### Formato de Entrega
 
-* Nuevamente podrás utilizar como guía de progreso los tests que ya incluye el proyecto. Estos servirán luego como ayuda para el profesor  la hora de corregir, pero no determinan la nota final de la evaluación.
+* No deberan cambiar los nombres ni ubicacion de las variables/componentes/context que vienen con el repo base
 
 Se aceptará la entrega mediante la submisión de la URL de su repositorio clonado
 
