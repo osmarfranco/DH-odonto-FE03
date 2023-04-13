@@ -1,12 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ScheduleFormModal from "./ScheduleFormModal";
 import styles from "./DetailCard.module.css";
+import api from "../services/api";
 
-const DetailCard = () => {
+const DetailCard = (props) => {
+
+  const { idDentista } = props;
+  const [dentista, setDentista] = useState({});
+
+  async function getDentista(){
+    try {
+      const { data } = await api.get(`/dentista?matricula=${idDentista}`);
+      console.log(data);
+      setDentista( {...data} );
+      console.log(dentista);
+    } catch (error) {
+      console.log("Erro ao obter dentista:");
+      console.log(error);
+    }
+  }
 
   useEffect(() => {
     //Nesse useEffect, você vai fazer um fetch na api passando o 
     //id do dentista que está vindo do react-router e carregar os dados em algum estado
+    getDentista();
   }, []);
   return (
     //As instruções que estão com {''} precisam ser 
@@ -28,12 +45,12 @@ const DetailCard = () => {
           </div>
           <div className="col-sm-12 col-lg-6">
             <ul className="list-group">
-              <li className="list-group-item">Nome: {'Nome do Dentista'}</li>
+              <li className="list-group-item">Nome: {dentista.nome}</li>
               <li className="list-group-item">
-                Sobrenome: {'Sobrenome do Dentista'}
+                Sobrenome: {dentista.sobrenome}
               </li>
               <li className="list-group-item">
-                Usuário: {'Nome de usuário do Dentista'}
+                Usuário: {dentista.usuario.username}
               </li>
             </ul>
             <div className="text-center">
