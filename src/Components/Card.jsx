@@ -17,7 +17,7 @@ const Card = (props) => {
         />
         <div className={`card-body ${styles.CardBody}`}>
           <Link to={`/dentista/${matricula}`}>
-            <h5 className={`card-title ${styles.title}`}>{nome} {sobrenome}</h5>
+            <h5 className={`card-title ${styles.title}`}>{nome}</h5>
           </Link>
           <p className="card-text">{username}</p>
         </div>

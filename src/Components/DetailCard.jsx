@@ -11,9 +11,7 @@ const DetailCard = (props) => {
   async function getDentista(){
     try {
       const { data } = await api.get(`/dentista?matricula=${idDentista}`);
-      console.log(data);
-      setDentista( {...data} );
-      console.log(dentista);
+      setDentista({nome: data.nome, sobrenome: data.sobrenome, matricula: data.matricula, usuario: data.usuario.username})
     } catch (error) {
       console.log("Erro ao obter dentista:");
       console.log(error);
@@ -21,15 +19,11 @@ const DetailCard = (props) => {
   }
 
   useEffect(() => {
-    //Nesse useEffect, você vai fazer um fetch na api passando o 
-    //id do dentista que está vindo do react-router e carregar os dados em algum estado
     getDentista();
   }, []);
   return (
-    //As instruções que estão com {''} precisam ser 
-    //substituídas com as informações que vem da api
     <>
-      <h1>Detail about Dentist {'Nome do Dentista'} </h1>
+      <h1>Detalhes sobre o dentista {dentista.nome}</h1>
       <section className="card col-sm-12 col-lg-6 container">
         {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
@@ -50,7 +44,7 @@ const DetailCard = (props) => {
                 Sobrenome: {dentista.sobrenome}
               </li>
               <li className="list-group-item">
-                Usuário: {dentista.usuario.username}
+                Usuário: {dentista.usuario}
               </li>
             </ul>
             <div className="text-center">
