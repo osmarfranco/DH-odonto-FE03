@@ -49,7 +49,7 @@ const LoginForm = () => {
               onSubmit={(event) => setPassword(event.target[1].value)}
             />
             <button className="btn btn-primary" type="submit">
-              Send
+              Enviar
             </button>
           </form>
         </div>

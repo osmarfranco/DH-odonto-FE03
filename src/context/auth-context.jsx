@@ -6,22 +6,22 @@ const AuthProvider = ({ children }) => {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    const response = localStorage.getItem("@times_user_name");
+    const response = localStorage.getItem("user_name");
     setName(response);
   }, []);
 
   function saveName(user_name) {
     setName(user_name);
-    localStorage.setItem("@times_user_name", user_name);
+    localStorage.setItem("user_name", user_name);
   }
 
   function saveToken(token) {
-    localStorage.setItem("@times_token", token);
+    localStorage.setItem("token", token);
   }
 
   function removeUserStorage() {
-    localStorage.removeItem("@times_user_name");
-    localStorage.removeItem("@times_token");
+    localStorage.removeItem("user_name");
+    localStorage.removeItem("token");
   }
 
   return (

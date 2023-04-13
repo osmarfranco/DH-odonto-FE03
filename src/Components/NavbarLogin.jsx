@@ -1,4 +1,5 @@
 import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -11,7 +12,6 @@ const Navbar = () => {
         aria-label="Third navbar example"
       >
         <div className="container">
-          {/* Ao clicar, o usuário deve ser redirecionado a home, com react-router */}
           <a className={`navbar-brand ${styles.navbarBrand}`}>
             DH Odonto
           </a>
