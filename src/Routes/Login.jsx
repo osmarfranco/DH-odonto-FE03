@@ -1,5 +1,6 @@
 import LoginForm from "../Components/LoginForm";
 import NavbarLogin from "../Components/NavbarLogin"
+import Footer from "../Components/Footer";
 
 const Contact = () => {
   return (
@@ -7,6 +8,7 @@ const Contact = () => {
       <NavbarLogin />
       <h1>Login</h1>
       <LoginForm /> 
+      <Footer />
     </>
   );
 };
