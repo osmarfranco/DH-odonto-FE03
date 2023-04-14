@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const token = localStorage.getItem("@times_token")
+const token = localStorage.getItem("token")
 
 const api = axios.create({
     baseURL: "https://dhodonto.ctdprojetos.com.br/",
