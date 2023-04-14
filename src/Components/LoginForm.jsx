@@ -14,14 +14,24 @@ const LoginForm = () => {
 
     const username = e.target[0].value
     const password = e.target[1].value
-    try {
-      const response = await api.post("/auth", {"username": username, "password": password});
-      saveName(username);
-      saveToken(response.data.token);
-      navigate("/home");
-    } catch (error) {
-      alert("Erro ao logar!")
+
+    //Verificando se o login tem pelo menos 5 caracteres
+    if(username.length < 5){
+      alert("Verifique as suas informações novamente");
+      console.error("username menor que 5 caracteres");
+    } else {
+      try {
+        const response = await api.post("/auth", {"username": username, "password": password});
+        saveName(username);
+        saveToken(response.data.token);
+        navigate("/home");
+      } catch (error) {
+        alert("Verifique suas informações novamente");
+        console.error("erro ao logar");
+        console.log(error);
+      }
     }
+
   };
 
   return (
