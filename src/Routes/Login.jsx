@@ -1,11 +1,11 @@
 import LoginForm from "../Components/LoginForm";
-import NavbarLogin from "../Components/NavbarLogin"
+import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 const Contact = () => {
   return (
     <>
-      <NavbarLogin />
+      <Navbar />
       <h1>Login</h1>
       <LoginForm /> 
       <Footer />
