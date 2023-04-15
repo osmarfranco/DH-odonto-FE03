@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import ScheduleFormModal from "./ScheduleFormModal";
 import styles from "./DetailCard.module.css";
 import api from "../services/api";
+import { DarkModeContext } from "../context/dark-mode";
+
+
 
 const DetailCard = (props) => {
-
+  const [darkMode] = useContext(DarkModeContext)
   const { idDentista } = props;
   const [dentista, setDentista] = useState({});
 
@@ -24,13 +27,13 @@ const DetailCard = (props) => {
   return (
     <>
       <h1>Detalhes sobre o dentista {dentista.nome}</h1>
-      <section className="card col-sm-12 col-lg-6 container">
+      <section className={`card col-sm-12 col-lg-6 container ${darkMode?"dark":""}`}>
         {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
         <div
-          className={`card-body row`}
+          className={`card-body row ${darkMode?"dark":""}`}
         >
-          <div className="col-sm-12 col-lg-6">
+          <div className={`col-sm-12 col-lg-6`}>
             <img
               className="card-img-top"
               src="/images/doctor.jpg"
@@ -38,16 +41,16 @@ const DetailCard = (props) => {
             />
           </div>
           <div className="col-sm-12 col-lg-6">
-            <ul className="list-group">
-              <li className="list-group-item">Nome: {dentista.nome}</li>
-              <li className="list-group-item">
+            <ul className={`list-group`}>
+              <li className={`list-group-item ${darkMode?"dark":""}`}>Nome: {dentista.nome}</li>
+              <li className={`list-group-item ${darkMode?"dark":""}`}>
                 Sobrenome: {dentista.sobrenome}
               </li>
-              <li className="list-group-item">
+              <li className={`list-group-item ${darkMode?"dark":""}`}>
                 Usuário: {dentista.usuario}
               </li>
             </ul>
-            <div className="text-center">
+            <div className={`text-center`}>
               {/* //Na linha seguinte deverá ser feito um teste se a aplicação
               // está em dark mode e deverá utilizado o css correto */}
               <button
