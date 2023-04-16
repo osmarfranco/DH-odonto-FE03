@@ -83,8 +83,12 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
+
 .dark-font{
   color: white;
+}
+.dark-font:hover{
+  color: rgb(136, 136, 136);
 }
 
 .dark-footer{

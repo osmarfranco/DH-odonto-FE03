@@ -10,8 +10,10 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <h1 className={`${darkMode?"dark-font":""}`} style={{margin:0}}>Login</h1>
+      <div className={`full-width ${darkMode?"dark":""}`} > 
+      <h1>Login</h1>
       <LoginForm /> 
+      </div>
       <Footer />
     </>
   );

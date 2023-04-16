@@ -40,11 +40,11 @@ const Navbar = () => {
         <div className={`container ` }>
           {tokenChecker() 
             ? 
-              <Link className={`navbar-brand ${styles.navbarBrand} ${darkMode?"dark-font":""}` } to="/home">
+              <Link className={`navbar-brand ${styles.navbarBrand}  ${darkMode?"dark-font":""}` } to="/home">
                 DH Odonto
               </Link>
            : 
-              <Link className={`navbar-brand ${styles.navbarBrand} `} to="/">
+              <Link className={`navbar-brand ${styles.navbarBrand} ${darkMode?"dark-font":""}`} to="/">
                 DH Odonto
               </Link>
           }
@@ -80,7 +80,7 @@ const Navbar = () => {
                 se sim, btn-dark, se não, btn-light */}
                 {tokenChecker() 
                   ? 
-                    <button className={`nav-link border-0 bg-transparent ${darkMode?"dark":""}`} onClick={() => logout()}>
+                    <button className={`nav-link border-0 bg-transparent ${darkMode?"dark-font":""}`} onClick={() => logout()}>
                       Logout
                     </button>
                   : 
@@ -93,12 +93,12 @@ const Navbar = () => {
                  Na linha seguinte deverá ser feito um teste se a aplicação
                  está em dark mode e deverá utilizar o icone ☀ ou 🌙 e btn-dark ou btn-light*/}
                 <button
-                  className={`btn btn-light${styles.btnStyle} ${darkMode?"dark-font":""}`}
+                  className={`btn btn-light${styles.btnStyle} ${darkMode?"dark-font ":""}`}
                     onClick={()=> setDarkMode(!darkMode)}
                 >
                 {!darkMode? 
-                  "Dark Mode"
-                  : "Light Mode"  
+                  "🌙"
+                  : "☀"  
                 }
                 </button>
               </li>

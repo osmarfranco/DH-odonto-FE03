@@ -38,12 +38,12 @@ const LoginForm = () => {
 
   return (
    
-      
-        <div className={`full-width ${darkMode?"dark":""}`} > 
+    
+        <>
         {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
         <div
-        className={`text-center card container ${styles.card} `}>
+        className={`text-center card container ${styles.card} ${darkMode?"dark":""}`}>
         <div className={`card-body ${styles.CardBody}`}>
           <form onSubmit={handleSubmit}>
             <input
@@ -67,8 +67,7 @@ const LoginForm = () => {
           </form>
         </div>
       </div>
-      </div>
-     
+      </>
   );
 };
 
