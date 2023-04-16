@@ -83,12 +83,24 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+.dark-font{
   color: white;
 }
 
+.dark-footer{
+  border: 1px #12121296 solid
+}
 .dark h5{
   color: white;
+}
+.no-border-radius{
+  border-radius: 0
+}
+.full-width{
+  width: 100%;
+}
+.dark-mode-modal-button{
+  filter: grayscale(100%)
 }
 
 @media(min-width: 786px) and (max-width: 1065px){

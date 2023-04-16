@@ -13,6 +13,7 @@ const Card = (props) => {
     <>
       {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
+    
       <div className={`card ${darkMode?"dark":""}`}>
         <img
           className="card-img-top"
@@ -26,6 +27,7 @@ const Card = (props) => {
           <p className="card-text">{username}</p>
         </div>
       </div>
+     
     </>
   );
 };

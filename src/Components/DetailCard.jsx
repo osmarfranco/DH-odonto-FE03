@@ -26,12 +26,13 @@ const DetailCard = (props) => {
   }, []);
   return (
     <>
-      <h1>Detalhes sobre o dentista {dentista.nome}</h1>
+      <h1 className={`${darkMode?"dark":""}`} style={{margin:0}}>Detalhes sobre o dentista {dentista.nome}</h1>
+      <div className={`full-width ${darkMode?"dark":""}`}>
       <section className={`card col-sm-12 col-lg-6 container ${darkMode?"dark":""}`}>
         {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
         <div
-          className={`card-body row ${darkMode?"dark":""}`}
+          className={`card-body row `}
         >
           <div className={`col-sm-12 col-lg-6`}>
             <img
@@ -42,11 +43,11 @@ const DetailCard = (props) => {
           </div>
           <div className="col-sm-12 col-lg-6">
             <ul className={`list-group`}>
-              <li className={`list-group-item ${darkMode?"dark":""}`}>Nome: {dentista.nome}</li>
-              <li className={`list-group-item ${darkMode?"dark":""}`}>
+              <li className={`list-group-item `}>Nome: {dentista.nome}</li>
+              <li className={`list-group-item `}>
                 Sobrenome: {dentista.sobrenome}
               </li>
-              <li className={`list-group-item ${darkMode?"dark":""}`}>
+              <li className={`list-group-item `}>
                 Usuário: {dentista.usuario}
               </li>
             </ul>
@@ -65,6 +66,7 @@ const DetailCard = (props) => {
           </div>
         </div>
       </section>
+      </div>
       <ScheduleFormModal />
     </>
   );

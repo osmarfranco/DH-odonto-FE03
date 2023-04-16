@@ -11,12 +11,12 @@ const Footer = () => {
   const [darkMode] = useContext(DarkModeContext)
   return (
     <footer>
-      <div className={styles.footerWrapper}>
-        <button className={`btn btn-danger ${styles.top} ${darkMode?"dark":""}`} onClick={scrollToTop}>Voltar para o topo</button>
+      <div className={`${styles.footerWrapper} ${darkMode?"dark":""}`}>
+        <button className={`btn btn-danger ${styles.top} no-border-radius`} onClick={scrollToTop}>Voltar para o topo</button>
         {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar a class navbar-dark bg-dark ou navbar-light bg-light  */}
-        <div className={`navbar-light bg-light} ${styles.footer}`}>
-          <div className="container">
+        <div className={`navbar-light bg-light} ${styles.footer} `}>
+          <div className={`container`}>
             <div className={`row`}>
               <div className="col-sm-12 col-lg-6">
                 {/* //Na linha seguinte deverá ser feito um teste se a aplicação

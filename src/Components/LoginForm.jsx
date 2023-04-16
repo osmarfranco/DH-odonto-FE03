@@ -1,13 +1,14 @@
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { AuthContext } from "../context/auth-context";
 import api from "../services/api";
 import styles from "./Form.module.css";
+import { DarkModeContext } from "../context/dark-mode";
 
 const LoginForm = () => {
  
   const navigate = useNavigate();
-
+  const [darkMode] = useContext(DarkModeContext)
   const {saveName, saveToken } = useContext(AuthContext);
 
   async function handleSubmit(e){
@@ -36,23 +37,24 @@ const LoginForm = () => {
   };
 
   return (
-    <>
-      {/* //Na linha seguinte deverá ser feito um teste se a aplicação
+   
+      
+        <div className={`full-width ${darkMode?"dark":""}`} > 
+        {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
-      <div
-        className={`text-center card container ${styles.card}`}
-      >
+        <div
+        className={`text-center card container ${styles.card} `}>
         <div className={`card-body ${styles.CardBody}`}>
           <form onSubmit={handleSubmit}>
             <input
-              className={`form-control ${styles.inputSpacing}`}
+              className={`form-control ${styles.inputSpacing} `}
               placeholder="Login"
               name="login"
               required
               onSubmit={(event) => setUsername(event.target[0].value)}
             />
             <input
-              className={`form-control ${styles.inputSpacing}`}
+              className={`form-control ${styles.inputSpacing} `}
               placeholder="Password"
               name="password"
               type="password"
@@ -65,7 +67,8 @@ const LoginForm = () => {
           </form>
         </div>
       </div>
-    </>
+      </div>
+     
   );
 };
 

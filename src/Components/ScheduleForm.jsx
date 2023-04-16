@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "./ScheduleForm.module.css";
 import api from "../services/api";
+import { DarkModeContext } from "../context/dark-mode";
 
 
 const ScheduleForm = () => {
@@ -9,6 +10,7 @@ const ScheduleForm = () => {
   const [dentista, setDentista] = useState({});
   const [pacientes, setPacientes] = useState([]);
   const [paciente, setPaciente] = useState({});
+  const [darkMode] = useContext(DarkModeContext)
 
   async function getDentistas(){
     try {
@@ -93,16 +95,14 @@ const ScheduleForm = () => {
       {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
       <div
-        className={`text-center container}`
-        }
-      >
+        className={`text-center container} `}>
         <form onSubmit={handleSubmit}>
-          <div className={`row ${styles.rowSpacing}`}>
+          <div className={`row ${styles.rowSpacing} `}>
             <div className="col-sm-12 col-lg-6">
               <label htmlFor="dentist" className="form-label">
                 Dentista
               </label>
-              <select className="form-select" name="dentist" id="dentist">
+              <select className={"form-select"} name="dentist" id="dentist">
                 {
                   dentistas.map((dentista) => (
                     <option key={dentista.matricula} value={dentista.matricula}>
@@ -127,20 +127,20 @@ const ScheduleForm = () => {
               </select>
             </div>
           </div>
-          <div className={`row ${styles.rowSpacing}`}>
+          <div className={`row ${styles.rowSpacing} `}>
             <div className="col-12">
               <label htmlFor="appointmentDate" className="form-label">
                 Date
               </label>
               <input
-                className="form-control"
+                className={`form-control`}
                 id="appointmentDate"
                 name="appointmentDate"
                 type="datetime-local"
               />
             </div>
           </div>
-          <div className={`row ${styles.rowSpacing}`}>
+          <div className={`row ${styles.rowSpacing} `}>
             {/* //Na linha seguinte deverá ser feito um teste se a aplicação
         // está em dark mode e deverá utilizar o css correto */}
             <button className={`btn btn-light ${styles.button}`} type="submit">
