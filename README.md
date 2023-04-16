@@ -14,7 +14,7 @@ Exame Final de Frontend III
   * [Formato de Entrega](#formato-de-entrega)
 
 ## Link da aplicação
-[Netlify] (https://checkpoint-fe03.netlify.app/)
+[Netlify](https://checkpoint-fe03.netlify.app/)
 
 ## Requisitos
 
